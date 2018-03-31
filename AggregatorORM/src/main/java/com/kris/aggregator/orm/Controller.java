@@ -12,17 +12,17 @@ public class Controller {
 	private DaoImpl impl;
 	
 	@RequestMapping("/getUsers")
-	public String getUsers(int id)
+	public Users getUsers(int id)
 	{
 		Users user = impl.getUser(id);
-		return user.toString();
+		return user;
 	}
 	
 	@RequestMapping("/getAddress")
-	public String getAddress(int id)
+	public Address getAddress(int id)
 	{
 		Address adr = impl.getAddress(id);
-		return adr.toString();
+		return adr;
 	}
 
 }
